@@ -1,0 +1,181 @@
+/* Genel ayarlar */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px auto;
+    background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+    color: #333;
+    padding: 0 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animasyonu */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Başlık */
+h1 {
+    font-size: 48px;
+    color: #0d47a1;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Başlık animasyonu */
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Ortadaki logo ve QR kodu yanyana */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+/* Logo stili */
+.center-logo {
+    max-width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.center-logo:hover {
+    transform: scale(1.08);
+}
+
+/* QR kod stili */
+.qr-code {
+    max-width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+.qr-code:hover {
+    transform: scale(1.08);
+}
+
+/* Fade-in aşağıdan */
+@keyframes fadeInUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Konum butonu */
+.location-button {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #0d47a1, #1976d2);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    animation: fadeIn 1.6s ease-in-out;
+}
+
+.location-button:hover {
+    background: linear-gradient(45deg, #1565c0, #42a5f5);
+    transform: scale(1.05);
+}
+
+/* Paragraflar */
+p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* Linkler */
+a {
+    color: #0d47a1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff5722;
+}
+
+/* Liste stil */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 10px 0;
+    background-color: #ffffffaa;
+    border-radius: 10px;
+    display: inline-block;
+    min-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+    animation: fadeInUp 1.8s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.05);
+    background-color: #e0f0ff;
+}
+
+/* Facebook Butonu (telefon numaralarıyla aynı stil) */
+.facebook-btn {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 10px 0;
+    background-color: #ffffffaa;
+    border-radius: 10px;
+    display: inline-block;
+    min-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    animation: fadeInUp 1.8s ease-in-out;
+    color: #0d47a1;
+}
+
+.facebook-btn:hover {
+    transform: scale(1.05);
+    background-color: #e0f0ff;
+    color: #0d47a1;
+}
+
+/* ----- Responsive Tasarım ----- */
+@media screen and (max-width: 768px) {
+    .center-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .center-logo,
+    .qr-code {
+        max-width: 150px;
+    }
+
+    li {
+        min-width: auto;
+        width: 80%;
+    }
+
+    .location-button,
+    .facebook-btn {
+        width: 80%;
+        padding: 12px 0;
+    }
+}

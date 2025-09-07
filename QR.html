@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>NOOR NETWORK</title>
+    <link rel="stylesheet" href="QR.css">
+</head>
+<body>
+    <h1>NOOR NETWORK</h1>
+
+    <!-- Logo -->
+    <img src="network logo.jpg" alt="Logo" class="center-logo" id="logo">
+
+    <p id="location-info"></p> <!-- Konum bilgisi burada gösterilecek -->
+
+    <p><strong>EMAİL:</strong> <a href="mailto:info@noor-network.com">✉️ info@noor-network.com</a></p>
+
+    <p><strong>PHONE:</strong></p>
+    <ul>
+        <li><a href="tel:+9647504533130">📞 +964 750 453 3130</a></li>
+        <li><a href="tel:+9647824463576">📞 +964 782 446 3576</a></li>
+        <li><a href="tel:+9647734453573">📞 +964 773 445 3573</a></li>
+    </ul>
+
+    <!-- Butonları kapsayan div -->
+    <div class="button-row">
+        <a href="https://www.facebook.com/share/1BJzDx4oYq/?mibextid=wwXIfr" target="_blank" class="facebook-btn">
+            📘 Facebook
+        </a>
+        <a href="https://maps.app.goo.gl/48yjWwFntb4j2uUQ9?g_st=ipc" target="_blank" class="facebook-btn">
+            📍 Konum
+        </a>
+    </div>
+
+    <script>
+        const logo = document.getElementById('logo');
+        const info = document.getElementById('location-info');
+
+        logo.addEventListener('click', () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        const mapsLink = `https://www.google.com/maps?q=${lat},${lon}`;
+                        info.innerHTML = `📍 Konumunuz: <a href="${mapsLink}" target="_blank">Haritada Göster</a>`;
+                    },
+                    (error) => {
+                        info.innerHTML = `❌ Konum alınamadı: ${error.message}`;
+                    }
+                );
+            } else {
+                info.innerHTML = "❌ Tarayıcınız konum özelliğini desteklemiyor.";
+            }
+        });
+    </script>
+     </body>
+</html>
