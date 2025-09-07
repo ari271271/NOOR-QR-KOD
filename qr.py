@@ -2,7 +2,7 @@ import qrcode
 from PIL import Image
 
 # Web sayfanın URL'si (QR tarandığında buraya yönlensin)
-data = "https://kullaniciadi.github.io/noor-network/"  # Kendi URL’n ile değiştir
+data = "https://github.com/ari271271/NOOR-QR-KOD.git"  # Kendi URL’n ile değiştir
 
 # QR kod oluştur
 qr = qrcode.QRCode(
