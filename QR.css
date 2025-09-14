@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 50px auto;
-    background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+    background-color: #f0f8ff; /* Tüm ekran için tek ton açık mavi */
     color: #333;
     padding: 0 20px;
     box-sizing: border-box;
